@@ -1,0 +1,570 @@
+USE [Library]
+GO
+/****** Object:  Table [dbo].[tbl_Admin]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Admin](
+	[AdminId] [int] IDENTITY(1,1) NOT NULL,
+	[fName] [varchar](50) NOT NULL,
+	[mName] [varchar](50) NOT NULL,
+	[lName] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[contactNo] [varchar](50) NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[userName] [varchar](50) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+	[conf_password] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_tbl_Admin] PRIMARY KEY CLUSTERED 
+(
+	[AdminId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_Admin1]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Admin1](
+	[AdminId] [int] IDENTITY(1,1) NOT NULL,
+	[fName] [varchar](50) NOT NULL,
+	[mName] [varchar](50) NOT NULL,
+	[lName] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[contactNo] [varchar](50) NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[userName] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+	[conf_password] [varchar](50) NOT NULL,
+	[Status] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_tbl_Admin1] PRIMARY KEY CLUSTERED 
+(
+	[AdminId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_categories]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_categories](
+	[category_id] [int] IDENTITY(1,1) NOT NULL,
+	[category_name] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_tbl_categories] PRIMARY KEY CLUSTERED 
+(
+	[category_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_Employees]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Employees](
+	[staffId] [int] IDENTITY(1,1) NOT NULL,
+	[fName] [varchar](50) NOT NULL,
+	[mname] [varchar](50) NOT NULL,
+	[lName] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[contactNo] [varchar](50) NOT NULL,
+	[employee_number] [varchar](50) NOT NULL,
+	[gender] [varchar](50) NOT NULL,
+	[designation] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+	[conf_pass] [varchar](50) NOT NULL,
+	[Status] [varchar](50) NOT NULL,
+ CONSTRAINT [ PK_tbl_Employees] PRIMARY KEY CLUSTERED 
+(
+	[staffId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_Employees_Requests]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Employees_Requests](
+	[staffId] [int] IDENTITY(1,1) NOT NULL,
+	[fName] [varchar](50) NOT NULL,
+	[mname] [varchar](50) NOT NULL,
+	[lName] [varchar](50) NOT NULL,
+	[Email] [varchar](50) NOT NULL,
+	[contactNo] [varchar](50) NOT NULL,
+	[employee_number] [varchar](50) NOT NULL,
+	[gender] [varchar](50) NOT NULL,
+	[designation] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+	[conf_pass] [varchar](50) NOT NULL,
+	[status] [varchar](50) NOT NULL,
+ CONSTRAINT [ PK_tbl_Employees_Requests] PRIMARY KEY CLUSTERED 
+(
+	[staffId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_issue]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_issue](
+	[Id_no] [varchar](50) NOT NULL,
+	[Book_name] [varchar](50) NOT NULL,
+	[Issue_date] [datetime] NOT NULL,
+	[Date_due] [datetime] NOT NULL,
+ CONSTRAINT [PK_tbl_issue] PRIMARY KEY CLUSTERED 
+(
+	[Id_no] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_Members]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Members](
+	[Id] [int] NOT NULL,
+	[Id_no] [varchar](50) NOT NULL,
+	[Surname] [varchar](50) NOT NULL,
+	[First_name] [varchar](50) NOT NULL,
+	[Last_name] [varchar](50) NOT NULL,
+	[Gender] [varchar](50) NOT NULL,
+	[Phone_number] [varchar](50) NOT NULL,
+	[Date_of_birth] [datetime] NOT NULL,
+	[Address] [varchar](50) NOT NULL,
+	[Registration_date] [datetime] NOT NULL,
+	[Expiry_date] [datetime] NOT NULL,
+	[Status] [varbinary](50) NOT NULL,
+ CONSTRAINT [PK_tbl_Members] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_Students]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_Students](
+	[studentId] [int] IDENTITY(1,1) NOT NULL,
+	[surName] [varchar](50) NOT NULL,
+	[middleName] [varchar](50) NOT NULL,
+	[lastName] [varchar](50) NOT NULL,
+	[AdmNo] [varchar](50) NOT NULL,
+	[gender] [varchar](50) NOT NULL,
+	[class] [varchar](50) NOT NULL,
+	[date_of_admission] [date] NOT NULL,
+	[expiry_date] [date] NOT NULL,
+	[password] [varchar](50) NOT NULL,
+	[conf_password] [varchar](50) NOT NULL,
+	[Status] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_tbl_Students] PRIMARY KEY CLUSTERED 
+(
+	[studentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_System_users_Log]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_System_users_Log](
+	[userID] [int] NOT NULL,
+	[loginstatus] [varchar](50) NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tbl_users]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tbl_users](
+	[userID] [int] IDENTITY(1,1) NOT NULL,
+	[first_name] [varchar](50) NOT NULL,
+	[middle_name] [varchar](50) NOT NULL,
+	[last_name] [varchar](50) NOT NULL,
+	[email] [varchar](50) NOT NULL,
+	[phone_number] [varchar](50) NOT NULL,
+	[gender] [varchar](50) NOT NULL,
+	[Department] [varchar](50) NOT NULL,
+	[departmentID] [varchar](50) NOT NULL,
+	[username] [varchar](50) NOT NULL,
+	[password] [varchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[userID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Admin] ON 
+
+GO
+INSERT [dbo].[tbl_Admin] ([AdminId], [fName], [mName], [lName], [Email], [contactNo], [Gender], [userName], [Password], [conf_password]) VALUES (2, N'MORRIS', N'NGUGI', N'MATI', N'ngugimorry@gmail.com', N'0703354420', N'MALE', N'morris', N'ngugi11', N'ngugi11')
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Admin] OFF
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Admin1] ON 
+
+GO
+INSERT [dbo].[tbl_Admin1] ([AdminId], [fName], [mName], [lName], [Email], [contactNo], [Gender], [userName], [password], [conf_password], [Status]) VALUES (1, N'1', N'1', N'1', N'i@2.com', N'1', N'MALE', N'1', N'1', N'1', N'true')
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Admin1] OFF
+GO
+SET IDENTITY_INSERT [dbo].[tbl_categories] ON 
+
+GO
+INSERT [dbo].[tbl_categories] ([category_id], [category_name]) VALUES (1, N'Admin')
+GO
+INSERT [dbo].[tbl_categories] ([category_id], [category_name]) VALUES (2, N'User')
+GO
+SET IDENTITY_INSERT [dbo].[tbl_categories] OFF
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Employees] ON 
+
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (1, N'1', N'2', N'3', N'4', N'5', N'6', N'7', N'8', N'9', N'10', N'11')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (2, N'1', N'2', N'3', N'4', N'5', N'6', N'7', N'8', N'9', N'10', N'11')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (3, N'1', N'2', N'3', N'4', N'5', N'6', N'7', N'8', N'9', N'10', N'11')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (4, N'1', N'2', N'3', N'4', N'5', N'6', N'7', N'8', N'9', N'10', N'11')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (5, N'1', N'2', N'3', N'4', N'5', N'6', N'7', N'8', N'9', N'10', N'11')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (6, N'ff', N'ff', N'ff', N'i@2.com', N'ggggg', N'ff', N'MALE', N'HEAD TEACHER', N'ccccccccc', N'ccccccccccccccc', N'false')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (7, N'ff', N'ff', N'ff', N'ngugimorry@gmail.com', N'1', N'a', N'MALE', N'HEAD TEACHER', N'SFGHJHGTR', N'QWFGFFREW', N'false')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (8, N'ff', N'ff', N'ff', N'i@2.com', N'1', N'ff', N'MALE', N'HEAD TEACHER', N'poijhg', N'oihg', N'false')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (9, N'ff', N'ff', N'ff', N'ngugimorry@gmail.com', N'ggggg', N'ff', N'MALE', N'HEAD TEACHER', N'lkjh', N'iug', N'false')
+GO
+INSERT [dbo].[tbl_Employees] ([staffId], [fName], [mname], [lName], [Email], [contactNo], [employee_number], [gender], [designation], [password], [conf_pass], [Status]) VALUES (10, N'ff', N'ff', N'ff', N'i@2.com', N'ggggg', N'a', N'FEMALE', N'NON TEACHING STAFF', N'ljh', N'iuhg', N'false')
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Employees] OFF
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Students] ON 
+
+GO
+INSERT [dbo].[tbl_Students] ([studentId], [surName], [middleName], [lastName], [AdmNo], [gender], [class], [date_of_admission], [expiry_date], [password], [conf_password], [Status]) VALUES (1, N'1', N'1', N'1', N'1', N'MALE', N'FORM 1', CAST(N'2016-03-15' AS Date), CAST(N'2016-05-21' AS Date), N'11', N'11', N'false')
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Students] OFF
+GO
+SET IDENTITY_INSERT [dbo].[tbl_users] ON 
+
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (1, N'morris', N'ngugi', N'mati', N'ngugimorry@gmail.com', N'0703354420', N'male', N'administrator', N'1', N'mohrris', N'ngugi11')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (2, N'mwenda', N'peter', N'njeru', N'mwenda@peter.com', N'0718324568', N'male', N'Administrator', N'1', N'mike', N'sonko')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (3, N'mwenda', N'peter', N'njeru', N'mwend@peter.com', N'0707224433', N'MALE', N'User', N'2', N'maina', N'mwenda11')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (4, N'leah', N'gatumi', N'kithinji', N'leahgatumi@gmail.com', N'0728495131', N'MALE', N'User', N'2', N'leah', N'')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (5, N'edward', N'mwendwa', N'mati', N'mwendwa@mati.com', N'0722336780', N'MALE', N'User', N'2', N'edwa', N'edward')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (6, N'maina', N'jackton', N'murithi', N'maina@yahoo.com', N'987789', N'MALE', N'User', N'2', N'maina', N'maina')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (7, N'maina', N'jackton', N'murithi', N'maina@yahoo.com', N'987789', N'MALE', N'User', N'2', N'maina', N'maina')
+GO
+INSERT [dbo].[tbl_users] ([userID], [first_name], [middle_name], [last_name], [email], [phone_number], [gender], [Department], [departmentID], [username], [password]) VALUES (1002, N',mnbvbnm,cvhj', N'kjhgfgjkhgfghj', N'khgfhkchjgcchj', N'oiuyguiyfiyf@ghjghj.com', N'sdiopoiuyt', N'MALE', N'Administrator', N'1', N'yuiytfiy', N'vhiffou')
+GO
+SET IDENTITY_INSERT [dbo].[tbl_users] OFF
+GO
+/****** Object:  StoredProcedure [dbo].[admin_approve]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+create proc [dbo].[admin_approve]
+@AdminId int
+AS
+
+UPDATE tbl_Admin1 SET Status = 'true' WHERE AdminId = @AdminId
+
+GO
+/****** Object:  StoredProcedure [dbo].[Admin_Insert]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+CREATE PROC [dbo].[Admin_Insert]
+@fName          VARCHAR (50),
+@mName          VARCHAR (50),
+@lName          VARCHAR (50),
+@Email          VARCHAR (50),
+@contactNo      VARCHAR (50),
+@Gender         VARCHAR (50),
+@userName       VARCHAR (50),
+@password       VARCHAR (50),
+@conf_password  VARCHAR (50) 
+
+AS 
+
+INSERT INTO tbl_Admin
+
+VALUES 
+(
+
+@fName,
+@mName,
+@lName,
+@Email,
+@contactNo,
+@Gender,
+@userName,
+@password,
+@conf_password
+)
+
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[Employee_Insert]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROC [dbo].[Employee_Insert]
+@fName          VARCHAR (50),
+@mname          VARCHAR (50),
+@lName          VARCHAR (50),
+@Email          VARCHAR (50),
+@contactNo      VARCHAR (50),
+@employee_number         VARCHAR (50),
+@gender       VARCHAR (50),
+@designation       VARCHAR (50),
+@password        VARCHAR (50),
+@conf_pass  VARCHAR (50),
+@Status  VARCHAR (50)
+
+AS 
+
+INSERT INTO tbl_Employees
+
+VALUES 
+(
+@fName,
+@mname,
+@lName,
+@Email,
+@contactNo,
+@employee_number,
+@gender,
+@designation,
+@password,
+@conf_pass,
+@Status
+)
+
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[SelectAllUsers]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROC [dbo].[SelectAllUsers]
+AS
+SELECT first_name+' '+middle_name+' '+last_name AS Name, gender AS Gender, phone_number AS Telephone, email AS Email, Department AS Department FROM tbl_users
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[Student_Insert]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROC [dbo].[Student_Insert]
+@surName          VARCHAR (50),
+@middleName          VARCHAR (50),
+@lastName          VARCHAR (50),
+@AdmNo          VARCHAR (50),
+@gender     VARCHAR (50),
+@class         VARCHAR (50),
+@date_of_admission       VARCHAR (50),
+@expiry_date    VARCHAR (50),
+@password       VARCHAR (50),
+@conf_password  VARCHAR (50),
+@Status   VARCHAR (50)  
+AS 
+
+INSERT INTO tbl_Students
+
+VALUES 
+(
+@surName,
+@middleName ,
+@lastName,
+@AdmNo ,
+@gender ,
+@class,
+@date_of_admission,
+@expiry_date,
+@password,
+@conf_password,
+@Status
+)
+GO
+/****** Object:  StoredProcedure [dbo].[userLogin]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROC [dbo].[userLogin]
+@username varchar(50),
+@userpassword varchar (50)
+AS
+DECLARE @userID int
+
+
+
+SET @userID = (SELECT userID FROM tbl_users WHERE username LIKE @username AND password LIKE @userpassword)
+BEGIN
+SELECT * FROM tbl_users WHERE userID = @userID;
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[userLogOut]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[userLogOut]
+@userID int
+AS
+UPDATE tbl_System_users_Log SET loginstatus =  'FALSE' WHERE userID = @userID
+
+GO
+/****** Object:  StoredProcedure [dbo].[users_Insert]    Script Date: 3/7/2016 8:24:34 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROC [dbo].[users_Insert]
+@first_name     VARCHAR (50),
+@middle_name    VARCHAR (50),
+@last_name      VARCHAR (50),
+@email          VARCHAR (50),
+@phone_number   VARCHAR (50),
+@gender         VARCHAR (50),
+@Department     VARCHAR (50),
+@departmentID INT,
+@username       VARCHAR (50),
+@password       VARCHAR (50)
+
+AS 
+
+INSERT INTO tbl_users
+
+VALUES 
+(
+
+@first_name,
+@middle_name,
+@last_name,
+
+@email,
+@phone_number,
+@gender,
+@Department,
+@departmentID,
+@username,
+@password
+)
+
+
+
+
+GO
