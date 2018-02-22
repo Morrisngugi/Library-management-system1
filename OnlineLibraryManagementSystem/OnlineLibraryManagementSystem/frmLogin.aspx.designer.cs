@@ -58,22 +58,13 @@ namespace OnlineLibraryManagementSystem {
         protected global::System.Web.UI.WebControls.Button cmdLogin;
         
         /// <summary>
-        /// Label3 control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// LinkButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
         /// PanelStaffLogin control.
@@ -121,24 +112,6 @@ namespace OnlineLibraryManagementSystem {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// LinkButton3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
-        
-        /// <summary>
         /// PanelStudentLogin control.
         /// </summary>
         /// <remarks>
@@ -184,21 +157,12 @@ namespace OnlineLibraryManagementSystem {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// lblMessage control.
+        /// lblMessage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
-        
-        /// <summary>
-        /// lnkSupport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkSupport;
+        protected global::System.Web.UI.WebControls.Label lblMessage1;
     }
 }

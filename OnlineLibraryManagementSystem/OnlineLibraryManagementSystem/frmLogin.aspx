@@ -22,96 +22,97 @@
         <div class="templatemo-content-widget templatemo-login-widget white-bg">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="images/lib.jpg" width="350" height="200" />
-                </div>              
+                    <img src="images/lib1.jpeg" width="350" height="200" />
+                    <%--                    <img src="images/lib.jpg" width="350" height="200" />--%>
+                </div>
             </div>
-           <br /> 
-            <asp:Panel ID="PanelAdminLogin" runat="server" Visible="false">
+            <br />
+            <asp:Panel ID="PanelAdminLogin" runat="server" Visible="true">
                 <div class="row">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
-                        <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="userName" ToolTip="Enter userName"></asp:TextBox>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                            <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="userName" ToolTip="Enter userName"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" ToolTip="Enter Password"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <asp:Button ID="cmdLogin" runat="server" Text="Login" CssClass="templatemo-blue-button width-100" BackColor="DarkBlue" OnClick="cmdLogin_Click" />
+
+                        <asp:Label ID="lblMessage" runat="server" Text="Label" Visible="false" Font-Size="Medium"></asp:Label>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
-                        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" ToolTip="Enter Password"></asp:TextBox>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox squaredTwo">
-                        <!--Remember Me Here---->
-                    </div>
-                </div>
-                <div class="form-group">
-                    <asp:Button ID="cmdLogin" runat="server" Text="Login" CssClass="templatemo-blue-button width-100" BackColor="DarkBlue" OnClick="cmdLogin_Click" />
-                </div>
-                    <asp:Label ID="Label3" runat="server" Text="Label" Visible="False" Font-Size="Medium"></asp:Label> <asp:LinkButton ID="LinkButton4" runat="server" Visible="False">Support</asp:LinkButton>
-            </div>               
             </asp:Panel>
 
 
             <asp:Panel ID="PanelStaffLogin" runat="server" Visible="false">
                 <div class="row">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
-                        <asp:TextBox ID="txtEmployeeNo" runat="server" CssClass="form-control" placeholder="Employee No:" ToolTip="Enter Employee Number"></asp:TextBox>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                            <asp:TextBox ID="txtEmployeeNo" runat="server" CssClass="form-control" placeholder="Employee No:" ToolTip="Enter Employee Number"></asp:TextBox>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
-                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" ToolTip="Enter Password"></asp:TextBox>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                            <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" ToolTip="Enter Password"></asp:TextBox>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox squaredTwo">
-                        Not a registered Staff? <asp:LinkButton ID="LnkStaffRegister" runat="server" Font-Bold="true" Font-Size="Large" OnClick="LnkStaffRegister_Click">Register here</asp:LinkButton>
+                    <div class="form-group">
+                        <div class="checkbox squaredTwo">
+                            Not a registered Staff?
+                            <asp:LinkButton ID="LnkStaffRegister" runat="server" Font-Bold="true" Font-Size="Large" OnClick="LnkStaffRegister_Click">Register here</asp:LinkButton>
+                        </div>
                     </div>
+                    <div class="form-group">
+                        <asp:Button ID="Button1" runat="server" Text="Login" CssClass="templatemo-blue-button width-100" BackColor="DarkBlue" OnClick="cmdLogin_Click" />
+                    </div>
+
                 </div>
-                <div class="form-group">
-                    <asp:Button ID="Button1" runat="server" Text="Login" CssClass="templatemo-blue-button width-100" BackColor="DarkBlue" OnClick="cmdLogin_Click" />
-                </div>
-                    <asp:Label ID="Label2" runat="server" Text="Label" Visible="False" Font-Size="Medium"></asp:Label> <asp:LinkButton ID="LinkButton3" runat="server" Visible="False">Support</asp:LinkButton>
-            </div>
             </asp:Panel>
-            
+
             <asp:Panel ID="PanelStudentLogin" runat="server" Visible="false">
                 <div class="row">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
-                        <asp:TextBox ID="txtAdmissionNo" runat="server" CssClass="form-control" placeholder="Admission No:" ToolTip="Enter userName"></asp:TextBox>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                            <asp:TextBox ID="txtAdmissionNo" runat="server" CssClass="form-control" placeholder="Admission No:" ToolTip="Enter userName"></asp:TextBox>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
-                        <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" ToolTip="Enter Password"></asp:TextBox>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                            <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" TextMode="Password" placeholder="Password" ToolTip="Enter Password"></asp:TextBox>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox squaredTwo">
-                       Not a registered Student? <asp:LinkButton ID="LnkStudentRegistration" runat="server" Font-Bold="true" Font-Size="Large" OnClick="LnkStudentRegistration_Click">Register here</asp:LinkButton>
+                    <div class="form-group">
+                        <div class="checkbox squaredTwo">
+                            Not a registered Student?
+                            <asp:LinkButton ID="LnkStudentRegistration" runat="server" Font-Bold="true" Font-Size="Large" OnClick="LnkStudentRegistration_Click">Register here</asp:LinkButton>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <asp:Button ID="Button2" runat="server" Text="Login" CssClass="templatemo-blue-button width-100" BackColor="DarkBlue" OnClick="cmdLogin_Click" />
-                </div>
-                    <asp:Label ID="lblMessage" runat="server" Text="Label" Visible="False" Font-Size="Medium"></asp:Label> <asp:LinkButton ID="lnkSupport" runat="server" Visible="False">Support</asp:LinkButton>
-            </div>
+                    <div class="form-group">
+                        <asp:Button ID="Button2" runat="server" Text="Login" CssClass="templatemo-blue-button width-100" BackColor="DarkBlue" OnClick="cmdLogin_Click" />
+                   </div><br />
+               <asp:Label ID="lblMessage1" runat="server" Text="Label" Visible="False" Font-Size="Medium"></asp:Label>
+                </div> 
             </asp:Panel>
 
 
 
-            
-           
+
+
         </div>
-        
-        
+
+
     </form>
 
     <script>

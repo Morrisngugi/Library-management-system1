@@ -93,18 +93,17 @@ namespace OnlineLibraryManagementSystem
             if (txtUserName.Text == "" || txtPassword.Text == "")
             {
                 lblMessage.Visible = true;
-                lnkSupport.Visible = false;
-                lblMessage.Text = "Please input your userName and Password";
-                MessageBox.Show("Please input your userName and Password");
+                
+                lblMessage.Text = "Please input your User Name and Password";
+                //MessageBox.Show("Please input your userName and Password");
             }
 
             else
             {
-
-                string userName = txtUserName.Text.ToString();
-                string userpass = txtPassword.Text.ToString();
-                string sqlstring = "SELECT* FROM tbl_users WHERE username LIKE '" + txtUserName.Text.ToString() + "' AND password LIKE '" + txtPassword.Text.ToString() + "'";
-                //string sqlstring = "Exec userLogin '" + txtUserName + "', '" + txtPassword + "'";
+                //string userName = txtUserName.Text.ToString();
+                //string userpass = txtPassword.Text.ToString();
+                //string sqlstring = "SELECT* FROM tbl_users WHERE username LIKE '" + txtUserName.Text.ToString() + "' AND password LIKE '" + txtPassword.Text.ToString() + "'";
+                string sqlstring = "Exec userLogin '" + txtUserName.Text + "', '" + txtPassword.Text + "'";
                 try
                 {
                     db.openConnection();
@@ -112,24 +111,27 @@ namespace OnlineLibraryManagementSystem
                     db.reader = db.comm.ExecuteReader();
                     if (db.reader.Read())
                     {
+                        Session["userType"] = db.reader["userType"].ToString();
                         Session["userID"] = db.reader["userID"].ToString();
-                        Session["userName"] = db.reader["first_name"].ToString();
-                        Session["departmentID"] = db.reader["departmentID"].ToString();
-
-                        if (int.Parse(Session["departmentID"].ToString()) == 1)
+                        Session["userName"] = db.reader["username"].ToString();
+                        if (Session["userType"].ToString() == "ADMIN")
                         {
                             Response.Redirect("frmAdmin.aspx");
                         }
-                        else if (int.Parse(Session["departmentID"].ToString()) == 2)
+                        else if (Session["userType"].ToString() == "STUDENT")
                         {
-                            Response.Redirect("frmUsers.aspx");
+                            Response.Redirect("frmStudents.aspx");
+                        }
+                        else if (Session["userType"].ToString() == "STAFF")
+                        {
+                            Response.Redirect("frmEmployees.aspx");
                         }
                     }
                     else
                     {
                         lblMessage.Visible = true;
-                        lnkSupport.Visible = false;
-                        lblMessage.Text = "Sorry, Wrong UserName or Password used!!";
+                      
+                        lblMessage.Text = "Login failed, Please check your user name and password and try again";
                     }
                 }
                 catch (Exception es)
