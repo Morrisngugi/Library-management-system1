@@ -22,37 +22,10 @@
         <div class="templatemo-content-widget templatemo-login-widget white-bg">
             <div class="row">
                 <div class="col-md-3">
-                    <%--<img src="images/HFC Logo.jpg" />--%>
                     <img src="images/lib.jpg" width="350" height="200" />
                 </div>              
             </div>
-            <div class="row">
-                <div class="col-md-8 col-lg-offset-2">
-                    <asp:Label ID="Label1" runat="server" Text="Login as:" Visible="true" Font-Size="Large" Font-Bold="true" Font-Names="Century Gothic" ForeColor=""></asp:Label>
-                </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-md-2 col-lg-offset-1">
-                    <ul class="greyarrow">
-                        <li>
-                           <h3><asp:LinkButton ID="lnkAdminLogin" runat="server" ToolTip="" BackColor="#ff3300" OnClick="lnkAdminLogin_Click">Admin</asp:LinkButton></h3> </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="greyarrow">
-                        <li>
-                            <h3><asp:LinkButton ID="LnkStaffLogin" runat="server" ToolTip="" BackColor="#ff3300" OnClick="LnkStaffLogin_Click">Teacher/Staff</asp:LinkButton></h3></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <ul class="greyarrow">
-                        <li>
-                            <h3><asp:LinkButton ID="LnkStudentLogin" runat="server" ToolTip="" BackColor="#ff3300" OnClick="LnkStudentLogin_Click">Student</asp:LinkButton></h3></li>
-                    </ul>
-                </div>
-            </div>
-           <br />
+           <br /> 
             <asp:Panel ID="PanelAdminLogin" runat="server" Visible="false">
                 <div class="row">
                 <div class="form-group">
