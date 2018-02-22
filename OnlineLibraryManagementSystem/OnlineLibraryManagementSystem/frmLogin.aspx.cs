@@ -146,25 +146,25 @@ namespace OnlineLibraryManagementSystem
         protected void lnkAdminLogin_Click(object sender, EventArgs e)
         {
             PanelAdminLogin.Visible = true;
-            lnkAdminLogin.CssClass = "LinkSelected";
+            
 
             PanelStaffLogin.Visible = false;
-            LnkStaffLogin.CssClass = "";
+           
 
             PanelStudentLogin.Visible = false;
-            LnkStudentLogin.CssClass = "";
+           
         }
 
         protected void LnkStaffLogin_Click(object sender, EventArgs e)
         {
             PanelAdminLogin.Visible = false;
-            lnkAdminLogin.CssClass = "";
+            
 
             PanelStaffLogin.Visible = true;
-            LnkStaffLogin.CssClass = "LinkSelected";
+           
 
             PanelStudentLogin.Visible = false;
-            LnkStudentLogin.CssClass = "";
+           
 
         }
 
@@ -172,13 +172,13 @@ namespace OnlineLibraryManagementSystem
         {
 
             PanelAdminLogin.Visible = false;
-            lnkAdminLogin.CssClass = "";
+          
 
             PanelStaffLogin.Visible = false;
-            LnkStaffLogin.CssClass = "";
+           
 
             PanelStudentLogin.Visible = true;
-            LnkStudentLogin.CssClass = "LinkSelected";
+           
 
         }
 
